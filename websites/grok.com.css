@@ -64,7 +64,9 @@ div[class*="p-2"][class*="absolute"] {
   background: transparent !important;
   background-color: transparent !important;
   box-shadow: none !important;
-  transition: background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+  transition:
+    background-color 0.35s ease-in-out,
+    box-shadow 0.35s ease-in-out;
 }
 
 /* кольцо / ring — оставляем сам визуальный эффект, но делаем цвет прозрачным по умолчанию.
@@ -72,12 +74,12 @@ div[class*="p-2"][class*="absolute"] {
 .query-bar:focus-within,
 .query-bar:hover {
   /* если нужен слабый ring при фокусе/ховере, используем rgba с альфа */
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06) inset;
 }
 
 /* если где-то остаются "ring-1 ring-inset", делаем их тоньше, а не убираем полностью */
 .ring-1.ring-inset {
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.06) inset !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06) inset !important;
   transition: box-shadow 0.25s ease-in-out;
 }
 
