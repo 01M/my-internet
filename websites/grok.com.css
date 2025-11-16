@@ -17,9 +17,9 @@ body,
   border: none !important;
   box-shadow: none !important;
   transition:
-    background-color .5s ease,
-    background .5s ease,
-    box-shadow .5s ease !important;
+    background-color 0.5s ease,
+    background 0.5s ease,
+    box-shadow 0.5s ease !important;
 }
 
 /* удаляем нижний чёрный градиент (главная проблема) */
@@ -46,7 +46,7 @@ body,
   background: transparent !important;
   backdrop-filter: none !important;
   box-shadow: none !important;
-  transition: all .3s ease !important;
+  transition: all 0.3s ease !important;
 }
 
 /* прозрачность для самого editable-инпута */
@@ -67,7 +67,7 @@ body,
 .top-0,
 .text-\[11px\] {
   opacity: 0 !important;
-  transition: opacity .3s ease !important;
+  transition: opacity 0.3s ease !important;
 }
 .action-buttons:hover,
 .top-0:hover,
@@ -79,10 +79,10 @@ body,
 [role="dialog"],
 div.duration-100,
 div[role="menu"] {
-  background: rgba(0,0,0,0.45) !important;
+  background: rgba(0, 0, 0, 0.45) !important;
   backdrop-filter: blur(16px) !important;
   box-shadow: 0 0 40px #0004 !important;
-  transition: all .3s ease !important;
+  transition: all 0.3s ease !important;
   border-radius: 16px !important;
 }
 
@@ -91,38 +91,38 @@ aside,
 nav,
 [class*="sidebar"],
 [class*="Sidebar"] {
-  background: rgba(0,0,0,0.25) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
   backdrop-filter: blur(12px) !important;
   border-radius: 18px !important;
   box-shadow: 0 0 40px #0004 inset !important;
-  transition: all .3s ease !important;
+  transition: all 0.3s ease !important;
 }
 
 /* кнопки */
 button {
   background: transparent !important;
   backdrop-filter: none !important;
-  transition: background .2s ease !important;
+  transition: background 0.2s ease !important;
 }
 button:hover {
-  background: rgba(255,255,255,0.05) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 
 /* блоки сообщений */
 .message,
 [class*="message"],
 div[class*="prose"] > div {
-  background: rgba(0,0,0,0.35) !important;
+  background: rgba(0, 0, 0, 0.35) !important;
   box-shadow: 0 0 16px #0004 !important;
   border-radius: 1.25em !important;
-  padding: .75em 1.2em !important;
+  padding: 0.75em 1.2em !important;
   backdrop-filter: blur(6px) !important;
-  transition: all .3s ease !important;
+  transition: all 0.3s ease !important;
 }
 
 /* подсветка сообщений при hover */
 .message:hover {
-  background: rgba(0,0,0,0.45) !important;
+  background: rgba(0, 0, 0, 0.45) !important;
   box-shadow: 0 0 20px #0006 !important;
 }
 
