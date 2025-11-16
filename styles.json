@@ -1431,10 +1431,9 @@
       "no footer": "footer, .footer-extra, [data-role=\"footer\"] {\n  display: none !important;\n}"
     },
     "grok.com.css": {
-      "grok-transparency $ Makes the main background elements transparent for a custom theme, including the input area under the chat window": "html, body, .bg-background, .fixed.bottom-0, .z-10, .z-20, .flex.flex-col.h-full, div[class=\"input-container\"], div[class*=\"prompt-input\"], textarea, [placeholder*=\"How can Grok help?\"], .bg-black, .dark\\:bg-black, .bg-gray-900, .dark\\:bg-gray-900 {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}\n:root {\n  --darkreader-background-ffffff: transparent !important;\n}\n@layer {\n  :root,\n  html,\n  body {\n    --darkreader-background-ffffff: transparent !important;\n    background-color: transparent !important;\n  }\n}",
-      "grok-hover $ Hides certain elements until hovered for a cleaner interface": ".top-0, .text-$11px$, .action-buttons {\n  opacity: 0 !important;\n  transition: all 0.3s ease-in-out !important;\n  &:hover {\n    opacity: 1 !important;\n  }\n}",
-      "grok-overlay fix $ Ensures overlays and dialogs have proper background visibility": "[role=\"dialog\"], div.duration-100 {\n  background-color: var(--popover) !important;\n}",
-      "grok-no footer $ Hides footer elements if present": "footer, #footer, .Footer {\n  display: none !important;\n}"
+      "grok-transparency": "html, body, .bg-background {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}",
+      "grok-hover": ".top-0, .text-\\[11px\\], .action-buttons {\n  opacity: 0 !important;\n  transition: all 0.3s ease-in-out !important;\n  &:hover {\n    opacity: 1 !important;\n  }\n}",
+      "grok-overlay fix": "[role=\"dialog\"], div.duration-100 {\n  background-color: var(--popover) !important;\n}"
     },
     "ground.news.css": {
       "transparency": "html, body, nav, header, .app-root, #pass-sidebar, #main, #content, section, header > div {\n  background-color: transparent !important;\n  background: none !important;\n  border: none !important;\n  box-shadow: none !important;\n  transition:\n    background-color 0.5s ease-in-out,\n    background 0.5s ease-in-out,\n    border 0.5s ease-in-out,\n    box-shadow 0.5s ease-in-out !important;\n}",
