@@ -1,19 +1,7 @@
-/* grok-transparency $ Makes the main background elements transparent for a custom theme, including the input area under the chat window */
+/* grok-transparency */
 html,
 body,
-.bg-background,
-.fixed.bottom-0,
-.z-10,
-.z-20,
-.flex.flex-col.h-full,
-div[class="input-container"],
-div[class*="prompt-input"],
-textarea,
-[placeholder*="How can Grok help?"],
-.bg-black,
-.dark\:bg-black,
-.bg-gray-900,
-.dark\:bg-gray-900 {
+.bg-background {
   background-color: transparent !important;
   background: none !important;
   border: none !important;
@@ -24,21 +12,10 @@ textarea,
     border 0.5s ease-in-out,
     box-shadow 0.5s ease-in-out !important;
 }
-/* @ Additional support for Dark Reader if no native dark theme */
-:root {
-  --darkreader-background-ffffff: transparent !important;
-}
-@layer {
-  :root,
-  html,
-  body {
-    --darkreader-background-ffffff: transparent !important;
-    background-color: transparent !important;
-  }
-}
-/* grok-hover $ Hides certain elements until hovered for a cleaner interface */
+
+/* grok-hover */
 .top-0,
-.text-$11px$,
+.text-\[11px\],
 .action-buttons {
   opacity: 0 !important;
   transition: all 0.3s ease-in-out !important;
@@ -46,14 +23,9 @@ textarea,
     opacity: 1 !important;
   }
 }
-/* grok-overlay fix $ Ensures overlays and dialogs have proper background visibility */
+
+/* grok-overlay fix */
 [role="dialog"],
 div.duration-100 {
   background-color: var(--popover) !important;
-}
-/* grok-no footer $ Hides footer elements if present */
-footer,
-#footer,
-.Footer {
-  display: none !important;
 }
