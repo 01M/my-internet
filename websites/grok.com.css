@@ -14,46 +14,46 @@ textarea,
 .dark\:bg-black,
 .bg-gray-900,
 .dark\:bg-gray-900 {
-background-color: transparent !important;
-background: none !important;
-border: none !important;
-box-shadow: none !important;
-transition:
-background-color 0.5s ease-in-out,
-background 0.5s ease-in-out,
-border 0.5s ease-in-out,
-box-shadow 0.5s ease-in-out !important;
+  background-color: transparent !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  transition:
+    background-color 0.5s ease-in-out,
+    background 0.5s ease-in-out,
+    border 0.5s ease-in-out,
+    box-shadow 0.5s ease-in-out !important;
 }
 /* @ Additional support for Dark Reader if no native dark theme */
 :root {
---darkreader-background-ffffff: transparent !important;
+  --darkreader-background-ffffff: transparent !important;
 }
 @layer {
-:root,
-html,
-body {
---darkreader-background-ffffff: transparent !important;
-background-color: transparent !important;
-}
+  :root,
+  html,
+  body {
+    --darkreader-background-ffffff: transparent !important;
+    background-color: transparent !important;
+  }
 }
 /* grok-hover $ Hides certain elements until hovered for a cleaner interface */
 .top-0,
 .text-$11px$,
 .action-buttons {
-opacity: 0 !important;
-transition: all 0.3s ease-in-out !important;
-&:hover {
-opacity: 1 !important;
-}
+  opacity: 0 !important;
+  transition: all 0.3s ease-in-out !important;
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 /* grok-overlay fix $ Ensures overlays and dialogs have proper background visibility */
 [role="dialog"],
 div.duration-100 {
-background-color: var(--popover) !important;
+  background-color: var(--popover) !important;
 }
 /* grok-no footer $ Hides footer elements if present */
 footer,
 #footer,
 .Footer {
-display: none !important;
+  display: none !important;
 }
