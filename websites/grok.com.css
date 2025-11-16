@@ -1,3 +1,4 @@
+/* --- оригинал (сохранён и немного унифицирован) --- */
 /* grok-transparency */
 html,
 body,
@@ -13,19 +14,75 @@ body,
     box-shadow 0.5s ease-in-out !important;
 }
 
-/* grok-hover */
+/* grok-hover (SASS -> plain CSS) */
 .top-0,
 .text-\[11px\],
 .action-buttons {
   opacity: 0 !important;
   transition: all 0.3s ease-in-out !important;
-  &:hover {
-    opacity: 1 !important;
-  }
+}
+.top-0:hover,
+.text-\[11px\]:hover,
+.action-buttons:hover {
+  opacity: 1 !important;
 }
 
 /* grok-overlay fix */
 [role="dialog"],
 div.duration-100 {
   background-color: var(--popover) !important;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* --- целевой, щадящий фикс для панели ввода Grok --- */
+/* делаем фон прозрачным, но сохраняем переходы и эффекты */
+.query-bar,
+.bg-surface-l1,
+div[class*="bg-surface-"],
+div[class*="ring-border"],
+.tiptap.ProseMirror,
+div[contenteditable="true"] {
+  /* прозрачный фон, но не отнимаем у элемента его transitions */
+  background: transparent !important;
+  background-color: transparent !important;
+  /* не затираем полностью backdrop-фильтр, если он используется для эффектов,
+     но удаляем сильный blur, если он мешает (можно закомментировать backdrop-filter если хочешь оставить blur) */
+  backdrop-filter: none !important;
+  /* убираем лишние тени, но оставляем возможность transitions */
+  box-shadow: none !important;
+  transition:
+    background-color 0.4s ease-in-out,
+    background 0.4s ease-in-out,
+    box-shadow 0.4s ease-in-out,
+    border-color 0.25s ease-in-out !important;
+}
+
+/* нижняя панель с кнопками — прозрачная, с плавным переходом */
+div.inset-x-0.bottom-0,
+div[class*="inset-x-0"][class*="bottom-0"],
+div[class*="p-2"][class*="absolute"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background-color 0.35s ease-in-out, box-shadow 0.35s ease-in-out;
+}
+
+/* кольцо / ring — оставляем сам визуальный эффект, но делаем цвет прозрачным по умолчанию.
+   когда нужно, можно показать ring (hover/focus) — ниже пример, не ломает анимации */
+.query-bar:focus-within,
+.query-bar:hover {
+  /* если нужен слабый ring при фокусе/ховере, используем rgba с альфа */
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.06) inset;
+}
+
+/* если где-то остаются "ring-1 ring-inset", делаем их тоньше, а не убираем полностью */
+.ring-1.ring-inset {
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.06) inset !important;
+  transition: box-shadow 0.25s ease-in-out;
+}
+
+/* кнопки и интерактивные элементы — не трогаем анимации */
+button,
+button * {
+  transition: inherit !important;
 }
